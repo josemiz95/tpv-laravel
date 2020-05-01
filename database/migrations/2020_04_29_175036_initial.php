@@ -58,7 +58,7 @@ class Initial extends Migration
             $table->integer('stock');
             $table->string('name');
             $table->text('description');
-            $table->string('img');
+            $table->string('img')->nullable(true);
             $table->float('price', 11, 2);
             $table->float('tax', 5, 2);
 
@@ -69,7 +69,7 @@ class Initial extends Migration
             $table->bigIncrements('id');
             $table->dateTime('date');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('client_id')->nullable(true);
             $table->unsignedBigInteger('cashbox_id');
 
             $table->timestamps();

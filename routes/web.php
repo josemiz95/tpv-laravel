@@ -11,6 +11,17 @@
 |
 */
 
+// use Illuminate\Routing\Route;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/pruebas', function(){
+    $ticket = App\Ticket::findOrFail(1);
+    foreach($ticket->products as $product){
+        echo $product->pivot->name.'<br>';
+    }
+    
+    die;
 });
