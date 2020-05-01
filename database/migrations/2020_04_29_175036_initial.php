@@ -70,12 +70,14 @@ class Initial extends Migration
             $table->dateTime('date');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('cashbox_id');
 
             $table->timestamps();
 
             // Index
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('cashbox_id')->references('id')->on('cashboxes');
         });
 
         Schema::create('tickets_products', function (Blueprint $table) {
