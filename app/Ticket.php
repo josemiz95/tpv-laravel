@@ -23,5 +23,10 @@ class Ticket extends Model
         // Relacion con Usuarios (N-1)
         return $this->belongsTo('App\Client');
     }
+
+    function tickets(){
+        // Relacion con Ticket tipo N-N
+        return $this->belongsToMany('App\Product', 'tickets_products', 'product_id', 'ticket_id');
+    }
     
 }
