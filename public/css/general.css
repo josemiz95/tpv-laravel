@@ -1,0 +1,173 @@
+/* CONTENIDO GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500;600&display=swap');
+*{font-family: 'Baloo Paaji 2', cursive;}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+header.header{
+    width: 100%;
+    height: 45px;
+    background-color: #0056b3;
+    color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    position: relative;
+    z-index: 2;
+}
+    header.header *{
+        margin: 0px;
+        width: fit-content;
+    }
+    header.header > a{
+        display: flex;
+    }
+    header.header > a i{
+        font-size: 20px;
+        padding: 0px 20px;
+        cursor: pointer;
+    }
+    header.header .userMenu{
+        position: relative;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        cursor: pointer;
+    }
+    header.header .userMenu a{
+        display: flex;
+    }
+    header.header .userMenu i{
+        padding: 0px 10px;
+    }
+
+    header.header .userMenu ul.menu{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        position: absolute;
+        top:45px;
+        right: 0px;
+        width: max-content;
+        background-color: #eceff1;
+        box-shadow: 0 3px 10px 0 rgba(0,0,0,.5);
+    }
+    header.header .userMenu ul.menu li{
+        width: 100%;;
+    }
+    header.header .userMenu ul.menu li a{
+        display: block;
+        padding: 10px 20px;
+        margin: 0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    header.header .userMenu ul.menu li:hover a{
+        background-color: #2286c3;
+        text-decoration: none;
+    }
+    header.header .userMenu ul.menu li, header.header .userMenu ul.menu li *{
+        color: #212121;
+        font-size: .95em;
+    }
+    header.header .userMenu ul.menu li:hover, header.header .userMenu ul.menu li:hover *{
+        color: #fff;
+    }
+    header.header .userMenu ul.menu i{
+        margin-right: 5px;
+        min-width: 1em;
+    }
+
+.appContent{
+    width: 100%;
+    height: calc(100vh - 45px);
+    display: flex;
+    flex-direction: row;
+}
+
+.appContent .appMenu{
+    width: 200px;
+    /* background-color: #283593; */
+    background-color: #eceff1;
+    /* border-right: solid #2286c3 1px; */
+    box-shadow: 0px 6px 10px 0px rgba(0,0,0,.5);
+    position: relative;
+    z-index: 2;
+}
+
+    .appContent .appMenu ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .appContent .appMenu ul li a{
+        display: block;
+        padding: 15px 30px;
+        width: 100%;
+        height: 100%;
+    }
+    .appContent .appMenu ul li a i{
+        width: 30px;
+    }
+    .appContent .appMenu ul li a, .appContent .appMenu ul li a * {
+        text-decoration: none;
+        color: #212121;
+        font-size: 15px;
+    }
+
+    .appContent .appMenu ul li:hover, .appContent .appMenu ul li.selected{
+        background-color: #2286c3;
+        color: #fff;
+    }
+
+    .appContent .appMenu ul li:hover *, .appContent .appMenu ul li.selected *{
+        color: #fff;
+    }
+
+.appContent .content{
+    flex:1;
+    height: calc(100vh - 45px);
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* SMALL MENU */
+
+.appContent .appMenu.smallMenu{
+    width: fit-content;
+}
+    .appContent .appMenu.smallMenu ul li a span{
+        display: none;
+    }
+    .appContent .appMenu.smallMenu ul li a{
+        width: fit-content;
+    }
+    .appContent .appMenu.smallMenu ul li a i{
+        text-align: center;
+    }
+    .appContent .appMenu.smallMenu ul li a{
+        padding: 15px 15px;
+    }
+
+/* CLASES DE USO GENERAL */
+
+.hide{
+    display: none;
+}
