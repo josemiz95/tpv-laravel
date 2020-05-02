@@ -15,7 +15,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth')->name('home');
 
 Route::get('/pruebas', function(){
     $ticket = App\Ticket::findOrFail(1);
@@ -25,3 +25,9 @@ Route::get('/pruebas', function(){
     
     die;
 });
+
+Route::get('/login', 'Auth\LoginController@index')->name('login');
+
+// Route::get('create/{name}/{email}/{password}', 'Auth\RegisterController@createByURL');
+
+Route::post('/authenticate', 'Auth\LoginController@authenticate')->name('authenticate');
