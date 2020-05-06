@@ -1,4 +1,4 @@
-@extends('layouts.fullcontent')
+@extends('layouts.main')
 
 @section('pageTitle', 'Iniciar Sesion')
 

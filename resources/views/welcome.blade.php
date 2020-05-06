@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.withMenu')
 
 @section('styles')
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -47,7 +47,7 @@
 
 @section('title', 'Laravel')
 
-@section('pageContent')
+@section('sectionContent')
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
