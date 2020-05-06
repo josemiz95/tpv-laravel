@@ -166,8 +166,92 @@ header.header{
         padding: 15px 15px;
     }
 
+/* BREADCRUMB */
+
+div.breadcrumbBar{
+    width: calc(100% + 30px) ;
+    background-color: #eceff1;
+    position: relative;
+    margin: -15px -15px 0px -15px;
+}
+
+div.breadcrumbBar ul{
+    margin: 0px;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 15px;
+    list-style: none;
+}
+
+div.breadcrumbBar ul li{
+    font-size: 15px;
+}
+
+div.breadcrumbBar ul li + li{
+    padding-left: 8px;
+}
+
+div.breadcrumbBar ul li + li::before {
+    display: inline-block;
+    padding-right: 8px;
+    content: "/";
+}
 /* CLASES DE USO GENERAL */
 
 .hide{
     display: none;
 }
+
+/* Tabla estilo material */
+table.tableMaterial thead tr th{
+    position: relative;
+}
+    table.tableMaterial thead tr th:before {
+        content: "";
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        background: #212121;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    table.tableMaterial thead tr th:last-child:before {
+        right: 20px;
+    }
+    table.tableMaterial thead tr th:first-child:before {
+        left: 20px;
+    }
+
+table.tableMaterial thead tr th{
+    padding: 6px 10px;
+}
+
+table.tableMaterial tbody tr td {
+    padding: 6px 10px;
+    text-align: center;
+}
+
+
+table.tableMaterial tbody tr td{
+    position: relative;
+}
+    table.tableMaterial tbody tr:not(:last-child) td:before {
+        content: "";
+        display: block;
+        height: 1px;
+        overflow: hidden;
+        background: #c7cacc;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    table.tableMaterial tbody tr:not(:last-child) td:last-child:before {
+        right: 20px;
+    }
+    table.tableMaterial tbody tr:not(:last-child) td:first-child:before {
+        left: 20px;
+    }

@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth')->name('home');
 
+// RUTA DE PRUEBAS //
 Route::get('/pruebas', function(){
     $ticket = App\Ticket::findOrFail(1);
     foreach($ticket->products as $product){
@@ -26,8 +27,14 @@ Route::get('/pruebas', function(){
     die;
 });
 
+// RUTAS DE SESIONES //
+
 Route::get('/login', 'Auth\LoginController@index')->name('login');
-
 // Route::get('create/{name}/{email}/{password}', 'Auth\RegisterController@createByURL');
-
 Route::post('/authenticate', 'Auth\LoginController@authenticate')->name('authenticate');
+
+// //
+
+Route::prefix('/users')->group(function(){
+    Route::get('/', 'UsersController@index')->name('usersList');
+});
