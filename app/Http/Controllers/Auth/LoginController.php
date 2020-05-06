@@ -36,10 +36,11 @@ class LoginController extends Controller
      */
     public function __construct(){
         // El middelware guest redirije en caso que la sesion este iniciada
-        $this->middleware('guest')->except('logout');
+        // $this->middleware('guest')->except('logout');
     }
 
     public function index(){
+        Auth::logout();
         return view('auth.login');
     }
 
