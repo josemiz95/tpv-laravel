@@ -15,7 +15,7 @@
     </header>
     <div class="appContent">
     
-        <div class="appMenu smallMenu">
+        <div class="appMenu smallMenu spanding">
             <nav>
                 <ul>
                     <li class="{{(request()->is('/'))? 'selected':''}}"><a href="{{ route('home') }}"><i class="fas fa-home"></i><span>Home</span></a></li>
