@@ -1,3 +1,5 @@
+{{-- VISTA PRINCIPAL CON MENUS --}}
+
 @extends('layouts.main')
 
 @section('pageContent')

@@ -1,3 +1,5 @@
+{{-- VISTA DE PANTALLA DE LOGIN --}}
+
 @extends('layouts.main')
 
 @section('pageTitle', 'Iniciar Sesion')

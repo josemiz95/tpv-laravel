@@ -1,3 +1,5 @@
+{{-- VISTA PRINCIPAL Y BASICA  --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,5 @@
+{{-- VISTA CON FORMULARIO DE AÑADIR USUARIOS --}}
+
 @extends('layouts.withMenu')
 
 @section('pageTitle', 'Nuevo Usuario')

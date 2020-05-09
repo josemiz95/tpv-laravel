@@ -1,3 +1,5 @@
+{{-- VISTA DE LA LISTA DE USUARIOS --}}
+
 @extends('layouts.withMenu')
 
 @section('pageTitle', 'Usuarios')
@@ -15,6 +17,7 @@
     <div class="userListContainer">
 
         <a class="user" href="{{ route('usersCreate') }}">
+            {{-- Boton para añadir usuarios --}}
             <div class="userCard addUser">
                 <div class="userImage"><i class="fas fa-user-plus"></i></div>
                 <h3>Añadir Usuario</h3>
@@ -22,6 +25,7 @@
         </a>
 
         @foreach ($arrUsers as $user )
+            {{-- Listado de todos los usuarios --}}
             <div class="user">
                 <div class="userCard">
                     <div class="userImage"><i class="fas fa-user"></i></div>

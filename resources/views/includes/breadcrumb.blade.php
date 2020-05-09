@@ -1,3 +1,5 @@
+{{-- VISTA PARA AÑADIR BREADCRUMB --}}
+
 @if (isset($route))
     <div class="breadcrumbBar">
         <ul>
