@@ -18,9 +18,8 @@
         <div class="appMenu smallMenu">
             <nav>
                 <ul>
-                    <li class="selected"><a href=""><i class="fas fa-meteor"></i><span>Seleccionado</span></a></li>
-                    <li class=""><a href=""><i class="fas fa-meteor"></i><span>Sin seleccionar</span></a></li>
-                    <li class=""><a href="{{ route('usersList') }}"><i class="fas fa-meteor"></i><span>Usuarios</span></a></li>
+                    <li class="{{(request()->is('/'))? 'selected':''}}"><a href="{{ route('home') }}"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li class="{{(request()->is('users*'))? 'selected':''}}"><a href="{{ route('usersList') }}"><i class="fas fa-users"></i><span>Usuarios</span></a></li>
                 </ul>
             </nav>
         </div>

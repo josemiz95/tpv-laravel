@@ -27,7 +27,7 @@ class UsersController extends Controller
         // Primero se realiza la validacion de datos
         $validateData = $request->validate([
             'name'=>['required'],
-            'mail'=>['required', 'E-mail', 'unique:users,email'], // Validacion de correo electronico y que sea unico de base de datos
+            'mail'=>['required', 'email', 'unique:users,email'], // Validacion de correo electronico y que sea unico de base de datos
             'password'=>['required'],
             'role'=>['required']
         ]);
