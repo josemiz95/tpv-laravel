@@ -233,6 +233,12 @@ div.breadcrumbBar ul li + li::before {
     .btnForm.secondary{
         background-color: #546E7A;
     }
+label.formControl{
+    color: #212121;
+}
+    label.formControl.error{
+        color: #F44336;
+    }
 
 input.formControl{ box-sizing: border-box;}
     input[type=text].formControl{
