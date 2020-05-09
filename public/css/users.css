@@ -19,6 +19,10 @@ div.userListContainer div.user, div.userListContainer a.user{
     align-items: stretch; /* align items in Cross Axis */
     align-content: stretch;
 }
+    div.userListContainer div.user:hover .userCard, div.userListContainer a.user:hover .userCard{
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+    }
+
     div.userListContainer a.user *{
         color: #000;
     }
