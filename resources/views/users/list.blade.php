@@ -3,7 +3,7 @@
 @section('pageTitle', 'Usuarios')
 
 @section('styles')
-    <link rel="stylesheet" href="css/users.css">
+    <link rel="stylesheet" href="{{ env('APP_URL') }}css/users.css">
 @endsection
 
 @section('sectionContent')
@@ -14,12 +14,12 @@
 
     <div class="userListContainer">
 
-        <div class="user">
+        <a class="user" href="{{ route('usersCreate') }}">
             <div class="userCard addUser">
                 <div class="userImage"><i class="fas fa-user-plus"></i></div>
                 <h3>Añadir Usuario</h3>
             </div>
-        </div>
+        </a>
 
         @foreach ($arrUsers as $user )
             <div class="user">

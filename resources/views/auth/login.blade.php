@@ -4,7 +4,7 @@
 
 @section('styles')
     @parent
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="{{ env('APP_URL') }}css/login.css">
 @endsection
 
 @section('pageContent')

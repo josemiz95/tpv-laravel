@@ -33,8 +33,10 @@ Route::get('/login', 'Auth\LoginController@index')->name('login');
 // Route::get('create/{name}/{email}/{password}', 'Auth\RegisterController@createByURL');
 Route::post('/authenticate', 'Auth\LoginController@authenticate')->name('authenticate');
 
-// //
+// RUTAS DE GESTION  DE USUARIOS //
 
 Route::prefix('/users')->group(function(){
     Route::get('/', 'UsersController@index')->name('usersList');
+    Route::get('crear', 'UsersController@create')->name('usersCreate');
+    Route::post('guardar', 'UsersController@store')->name('usersStore');
 });

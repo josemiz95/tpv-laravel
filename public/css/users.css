@@ -11,7 +11,7 @@ div.userListContainer{
     box-sizing: border-box;
 }
 
-div.user{
+div.userListContainer div.user, div.userListContainer a.user{
     padding: 15px;
     box-sizing: border-box;
     display: flex;
@@ -19,42 +19,60 @@ div.user{
     align-items: stretch; /* align items in Cross Axis */
     align-content: stretch;
 }
+    div.userListContainer a.user *{
+        color: #000;
+    }
 
-.user .userCard{
-    width: 200px;
-    background-color: #eceff1;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 10px;
-}
-.user .userCard.addUser{
+    div.userListContainer .user .userCard{
+        width: 200px;
+        background-color: #eceff1;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    div.userListContainer .user .userCard.addUser{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    div.userListContainer .user .userCard .userImage{
+        width: 100%;
+        display: flex;
+        font-size: 60px;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0;
+    }
+    div.userListContainer .user .userCard h3{
+        text-align: center;
+        margin: 15px 0;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    div.userListContainer .user .userCard h5{
+        text-align: center;
+        font-weight: 100;
+        margin: 15px 0;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+/* FORMULARIO USUARIO */
+form.formUser{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.user .userCard .userImage{
+form.formUser .formRow{
     width: 100%;
-    display: flex;
-    font-size: 60px;
-    align-items: center;
-    justify-content: center;
+    max-width: 450px;
     margin: 15px 0;
-}
-.user .userCard h3{
-    text-align: center;
-    margin: 15px 0;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.user .userCard h5{
-    text-align: center;
-    font-weight: 100;
-    margin: 15px 0;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
