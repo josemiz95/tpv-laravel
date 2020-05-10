@@ -1,6 +1,7 @@
 /* CONTENIDO GENERAL */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500;600&display=swap');
 *{font-family: 'Baloo Paaji 2', cursive;}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -102,9 +103,7 @@ header.header{
 
 .appContent .appMenu{
     width: 200px;
-    /* background-color: #283593; */
     background-color: #eceff1;
-    /* border-right: solid #2286c3 1px; */
     box-shadow: 0px 6px 10px 0px rgba(0,0,0,.5);
     position: relative;
     z-index: 2;
@@ -140,6 +139,14 @@ header.header{
         color: #fff;
     }
 
+    /* MENU STTINGS */
+    .appContent .appMenu ul li.menuSettings{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
 .appContent .content{
     flex:1;
     height: calc(100vh - 45px);
@@ -166,6 +173,7 @@ header.header{
     .appContent .appMenu.smallMenu ul li a{
         padding: 15px 15px;
     }
+
     /* MENU SPANDING */
     .appContent .appMenu.smallMenu.spanding ul li:hover a span{
         display: flex;
@@ -178,6 +186,9 @@ header.header{
         z-index: -1;
         box-shadow: 0px 0px 6px 0px rgba(0,0,0,.5);
     }
+    .appContent .appMenu.smallMenu.spanding ul li.menuSettings:hover a span{
+        display: none;
+    }
 
 
 /* BREADCRUMB */
@@ -188,29 +199,34 @@ div.breadcrumbBar{
     position: relative;
     margin: -15px -15px 0px -15px;
 }
+    div.breadcrumbBar ul{
+        margin: 0px;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 15px;
+        list-style: none;
+    }
 
-div.breadcrumbBar ul{
-    margin: 0px;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 15px;
-    list-style: none;
-}
+    div.breadcrumbBar ul li span{
+        font-size: 15px;
+    }
 
-div.breadcrumbBar ul li{
-    font-size: 15px;
-}
+    div.breadcrumbBar ul li + li{
+        padding-left: 8px;
+    }
 
-div.breadcrumbBar ul li + li{
-    padding-left: 8px;
-}
+    div.breadcrumbBar ul li + li::before {
+        display: inline-block;
+        padding-right: 8px;
+        content: "/";
+    }
 
-div.breadcrumbBar ul li + li::before {
-    display: inline-block;
-    padding-right: 8px;
-    content: "/";
-}
+    div.breadcrumbBar ul li:last-child span{
+        font-weight: 700;
+        color: #0056b3;
+    }
+
 /* CLASES DE USO GENERAL */
 
 .hide{

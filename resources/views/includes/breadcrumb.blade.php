@@ -4,7 +4,7 @@
     <div class="breadcrumbBar">
         <ul>
             @foreach ($route as $route)
-                <li>{{ $route }}</li>
+                <li><span>{{ $route }}</span></li>
             @endforeach
         </ul>
     </div>

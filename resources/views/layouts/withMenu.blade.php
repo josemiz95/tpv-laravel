@@ -8,8 +8,8 @@
         <div class="userMenu">
             <a id="userMenu">Nombre de usuario <i class="fas fa-sort-down"></i></a>
             <ul class="menu hide">
-                <li><a href=""><i class="fas fa-user"></i>Perfil</a></li>
-                <li><a href=""><i class="fas fa-power-off"></i>Cerrar sesion</a></li>
+                <li><a href="{{ route('usersEdit', ['id' => Auth::user()]) }}"><i class="fas fa-user"></i>Perfil</a></li>
+                <li><a href="{{ route('login') }}"><i class="fas fa-power-off"></i>Cerrar sesion</a></li>
             </ul>
         </div>
     </header>
