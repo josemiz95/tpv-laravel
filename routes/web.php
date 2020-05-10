@@ -39,4 +39,5 @@ Route::prefix('/users')->group(function(){
     Route::get('/', 'UsersController@index')->name('usersList');
     Route::get('crear', 'UsersController@create')->name('usersCreate');
     Route::post('guardar', 'UsersController@store')->name('usersStore');
+    Route::get('editar/{id}', 'UsersController@edit')->name('usersEdit');
 });

@@ -44,4 +44,13 @@ class UsersController extends Controller
         
         return redirect()->route('usersList');
     }
+
+    function edit($id){
+        // Carga vista de editar
+        $user = User::find($id);
+
+        return view('users.edit',[
+            'user' => $user
+        ]);
+    }
 }

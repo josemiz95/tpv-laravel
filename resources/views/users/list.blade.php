@@ -26,13 +26,13 @@
 
         @foreach ($arrUsers as $user )
             {{-- Listado de todos los usuarios --}}
-            <div class="user">
+            <a class="user" href="{{ route('usersEdit', ['id' => $user->id]) }}">
                 <div class="userCard">
                     <div class="userImage"><i class="fas fa-user"></i></div>
                     <h3>{{$user->name}}</h3>
                     <h5>{{$user->email}}</h5>
                 </div>
-            </div>
+            </a>
         @endforeach
     </div>
 
