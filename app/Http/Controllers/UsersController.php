@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
 
 class UsersController extends Controller
 {
@@ -38,7 +39,7 @@ class UsersController extends Controller
                 'name' => $request->input('name'),
                 'email' => $request->input('mail'),
                 'password' => Hash::make($request->input('password')),
-                'rol' => $request->input('role')
+                '' => $request->input('role')
             ]);
         }
         
@@ -52,5 +53,29 @@ class UsersController extends Controller
         return view('users.edit',[
             'user' => $user
         ]);
+    }
+
+    function update(Request $request){
+        // Modifica los datos del usuario
+        $user = User::find($request->input('id'));
+
+        $validateData = $request->validate([
+            'id' => ['required'],
+            'name'=>['required'],
+            'mail'=>['required', 'email', Rule::unique('users', 'email')->ignore($user->id)], // Validacion de correo electronico y que sea unico de base de datos (Omitiendose a el mismo)
+            'role'=>['required']
+        ]);
+
+        if($validateData){
+            $user->name = $request->input('name');
+            $user->email = $request->input('mail');
+            $user->password = ($request->input('password') != '' && $request->input('password') != null)?Hash::make($request->input('password')): $user->password;
+            $user->rol = $request->input('role');
+
+            $user->save();
+        }
+
+        return redirect()->route('usersList');
+
     }
 }

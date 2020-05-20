@@ -14,9 +14,9 @@
         'route' => ['Usuarios', 'Editar', $user->name]
     ])
 
-    <form action="" class="formUser" method="POST">
+    <form action="{{ route('usersUpdate') }}" class="formUser" method="POST">
         @csrf
-
+        <input type="hidden" name="id" id="id" value="{{ $user->id }}">
         <div class="formRow">
             <label class="formControl @error('name') error @enderror" for="name" class="formControl">Nombre</label>
             <input type="text" id="name" name="name" value="{{ $user->name }}" class="formControl">
@@ -40,7 +40,7 @@
         </div>
         <div class="formButtons">
             <a href="{{ route('usersList') }}" class="btnForm secondary">Cancelar</a>
-            <input type="submit" class="btnForm" value="Crear Usuario">
+            <input type="submit" class="btnForm" value="Modificar Usuario">
         </div>
         
     </form>
