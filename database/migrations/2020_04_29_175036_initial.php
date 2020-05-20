@@ -53,8 +53,14 @@ class Initial extends Migration
             $table->timestamps();
         });
 
+        Schema::create('categories', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+        });
+
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('category_id');
             $table->integer('stock');
             $table->string('name');
             $table->text('description');
@@ -63,6 +69,8 @@ class Initial extends Migration
             $table->float('tax', 5, 2);
 
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
         });
 
         Schema::create('tickets', function (Blueprint $table) {
@@ -107,6 +115,7 @@ class Initial extends Migration
     {
         Schema::dropIfExists('tickets_products');
         Schema::dropIfExists('tickets');
+        Schema::dropIfExists('categories');
         Schema::dropIfExists('products');
         Schema::dropIfExists('clients');
         Schema::dropIfExists('cashboxes');

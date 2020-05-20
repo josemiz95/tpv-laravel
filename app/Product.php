@@ -14,4 +14,9 @@ class Product extends Model
         return $this->belongsToMany('App\Ticket', 'tickets_products', 'product_id', 'ticket_id')
                     ->withPivot('name','quantity','price','tax');
     }
+
+    function category(){
+        // Relacion con categoria
+        return $this->belongsTo('App\Category');
+    }
 }
