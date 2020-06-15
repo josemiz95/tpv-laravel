@@ -1,0 +1,9 @@
+.productsContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+table tbody tr:hover{
+    background-color: #eceff1;
+}

@@ -40,5 +40,9 @@ Route::prefix('/users')->group(function(){
     Route::get('crear', 'UsersController@create')->name('usersCreate');
     Route::post('guardar', 'UsersController@store')->name('usersStore');
     Route::get('editar/{id}', 'UsersController@edit')->name('usersEdit');
-    Route::post('guardar', 'UsersController@update')->name('usersUpdate');
+    Route::post('actualizar', 'UsersController@update')->name('usersUpdate');
+});
+
+Route::prefix('/productos')->group(function(){
+    Route::get('/', 'ProductController@index')->name('product.list');
 });

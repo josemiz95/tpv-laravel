@@ -300,6 +300,11 @@ input.formControl{ box-sizing: border-box;}
     
 
 /* Tabla estilo material */
+table.tableMaterial {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 table.tableMaterial thead tr th{
     position: relative;
 }
@@ -308,17 +313,17 @@ table.tableMaterial thead tr th{
         display: block;
         height: 1px;
         overflow: hidden;
-        background: #212121;
+        background: #c6d6e1;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
     }
     table.tableMaterial thead tr th:last-child:before {
-        right: 20px;
+        /* right: 20px; */
     }
     table.tableMaterial thead tr th:first-child:before {
-        left: 20px;
+        /* left: 20px; */
     }
 
 table.tableMaterial thead tr th{
@@ -339,15 +344,15 @@ table.tableMaterial tbody tr td{
         display: block;
         height: 1px;
         overflow: hidden;
-        background: #c7cacc;
+        background: #c6d6e1;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
     }
     table.tableMaterial tbody tr:not(:last-child) td:last-child:before {
-        right: 20px;
+        /* right: 20px; */
     }
     table.tableMaterial tbody tr:not(:last-child) td:first-child:before {
-        left: 20px;
+        /* left: 20px; */
     }

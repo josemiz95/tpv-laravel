@@ -20,6 +20,7 @@
                 <ul>
                     <li class="{{(request()->is('/'))? 'selected':''}}"><a href="{{ route('home') }}"><i class="fas fa-home"></i><span>Home</span></a></li>
                     <li class="{{(request()->is('users*'))? 'selected':''}}"><a href="{{ route('usersList') }}"><i class="fas fa-users"></i><span>Usuarios</span></a></li>
+                    <li class="{{(request()->is('users*'))? 'selected':''}}"><a href="{{ route('product.list') }}"><i class="fas fa-users"></i><span>Productos</span></a></li>
 
                     {{-- Menu apartado de configuracion --}}
                     <li class="{{(request()->is('settings*'))? 'selected':''}} menuSettings"><a href=""><i class="fas fa-cog"></i><span>Configuración</span></a></li>
